@@ -66,6 +66,18 @@ Add to your MCP client configuration:
 }
 `
 
+= Codex Connection =
+
+Add to `~/.codex/config.toml` or `.codex/config.toml`:
+
+`
+[mcp_servers.elementor-mcp]
+url = "https://your-site.com/wp-json/mcp/elementor-mcp-server"
+
+[mcp_servers.elementor-mcp.http_headers]
+"Authorization" = "Basic BASE64_ENCODED_CREDENTIALS"
+`
+
 = npx mcp-remote Connection (Local) =
 
 For local development, use `mcp-remote` to bridge your AI client to the WordPress HTTP endpoint:

@@ -214,6 +214,17 @@
 				JSON.stringify( windsurfConfig, null, 4 )
 			);
 
+			// Codex — uses TOML format with url and http_headers.
+			var codexConfig = '[mcp_servers.elementor-mcp]\n' +
+				'url = "' + endpoint + '"\n\n' +
+				'[mcp_servers.elementor-mcp.http_headers]\n' +
+				'"Authorization" = "' + headerValue + '"';
+			setConfigBlock(
+				'elementor-mcp-codex-code',
+				'codex-config',
+				codexConfig
+			);
+
 			// npx mcp-remote — bridges HTTP endpoint via stdio.
 			var mcpRemoteConfig = {
 				mcpServers: {

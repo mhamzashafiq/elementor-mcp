@@ -154,6 +154,18 @@ Add to `~/.gemini/antigravity/mcp_config.json`:
 }
 ```
 
+### Codex
+
+Add to `~/.codex/config.toml` (global) or `.codex/config.toml` (project-scoped):
+
+```toml
+[mcp_servers.elementor-mcp]
+url = "https://your-site.com/wp-json/mcp/elementor-mcp-server"
+
+[mcp_servers.elementor-mcp.http_headers]
+"Authorization" = "Basic BASE64_ENCODED_CREDENTIALS"
+```
+
 ### npx mcp-remote (Local Development)
 
 For local development, you can use [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) to bridge your AI client to the WordPress HTTP endpoint via stdio. This works with any MCP client that supports stdio transport:
